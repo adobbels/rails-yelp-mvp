@@ -18,8 +18,13 @@
           </li>
         </ul>
       </div>
+
+
     </div>
   </div>
   <%= link_to "List", restaurants_path, class:"btn btn-primary" %>
   <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class:"btn btn-primary" %>
+      <% @restaurant.reviews.each do |review| %>
+      <h6 ><%= review.rating %>/5 : <%= review.content %><h6>
+      <% end %>
 </div>
