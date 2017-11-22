@@ -1,0 +1,10 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone %>
+  <%= f.input :category %>
+
+  <%= f.button :submit, class:"btn btn-danger" %>
+<% end %>
